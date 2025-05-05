@@ -5,7 +5,7 @@ const createNewPost = async () => {
     isLoading = true;
     try {
         const response = await fetch(POSTS_URL, {method: "POST"});
-        result = await response.json();
+        const result = await response.json();
         console.log('result', result);
     }
     catch(error) {
