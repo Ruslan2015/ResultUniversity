@@ -1,15 +1,18 @@
-import ReactLogo from './assets/react.svg?react';
+import { createElement } from 'react';
+import reactLogo from './assets/react.svg';
 
 const date = new Date();
 const curYear = date.getFullYear();
 
-export const App = () => (
-  <div>
-    <h1>Hello world!</h1>
-    <ReactLogo />
-    <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-      Learn React
-    </a>
-    <h3>{curYear}</h3>
-  </div>
-);
+export const App = () => {
+  return createElement('div', null, [
+    createElement('h1', null, 'Hello world!'),
+    createElement('img', { src: reactLogo }, null),
+    createElement(
+      'a',
+      { className: 'App-link', href: 'https://reactjs.org', target: '_blank', rel: 'noopener noreferrer' },
+      'Learn React',
+    ),
+    createElement('h3', null, curYear),
+  ]);
+};
