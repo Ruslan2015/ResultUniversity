@@ -2,6 +2,8 @@ import styles from './app.module.css';
 import data from '../data.json';
 import { useState } from 'react';
 
+// Commit
+
 export const App = () => {
   // Можно задать 2 состояния — steps и activeIndex
   const [steps, setSteps] = useState(data);
