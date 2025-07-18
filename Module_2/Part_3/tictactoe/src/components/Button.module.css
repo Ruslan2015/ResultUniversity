@@ -1,0 +1,14 @@
+.button {
+  padding: 0.5em 0.75em;
+  background-color: #16b6df;
+  border: none;
+  font-size: 72px;
+}
+
+.button:hover {
+  background-color: #05404e;
+}
+
+.button:disabled {
+  background-color: #849194;
+}
